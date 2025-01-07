@@ -11,4 +11,7 @@ import java.util.List;
 public interface TodoRepository extends JpaRepository<Todo, Long> {
 
     List<TodoVo> findAllProjectsBy();
+
+    @Override
+    Todo save(Todo todo);
 }
