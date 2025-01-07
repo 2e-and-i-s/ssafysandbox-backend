@@ -16,4 +16,8 @@ public class Todo {
     private String content;
     @Column(nullable = false)
     private boolean completed;
+
+    public void toggleCompleted() {
+        completed = !completed;
+    }
 }

@@ -26,4 +26,14 @@ public class CRUDController {
         crudService.createTodo(content);
         return ResponseEntity.created(null).build();
     }
+
+    @PatchMapping("/{todoId}")
+    public ResponseEntity<?> updateTodo(@PathVariable long todoId){
+        try {
+            crudService.updateTodo(todoId);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.created(null).build();
+    }
 }

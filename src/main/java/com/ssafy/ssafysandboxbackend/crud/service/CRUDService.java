@@ -34,4 +34,11 @@ public class CRUDService {
 
         todoRepository.save(todo);
     }
+
+    public void updateTodo(long todoId) throws Exception {
+        Todo todo = todoRepository.findById(todoId)
+                .orElseThrow(Exception::new);
+
+        todo.toggleCompleted();
+    }
 }
