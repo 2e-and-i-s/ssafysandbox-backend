@@ -41,4 +41,8 @@ public class CRUDService {
 
         todo.toggleCompleted();
     }
+
+    public void deleteTodoById(long todoId){
+        todoRepository.deleteById(todoId);
+    }
 }

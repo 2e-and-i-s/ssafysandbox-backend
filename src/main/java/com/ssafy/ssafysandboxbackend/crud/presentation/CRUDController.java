@@ -36,4 +36,10 @@ public class CRUDController {
         }
         return ResponseEntity.created(null).build();
     }
+
+    @DeleteMapping("/{todoId}")
+    public ResponseEntity<?> deleteTodo(@PathVariable long todoId){
+        crudService.deleteTodoById(todoId);
+        return ResponseEntity.noContent().build();
+    }
 }
