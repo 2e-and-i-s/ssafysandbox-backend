@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: SsafysandboxBackend
+  profiles:
+    active: ${SPRING_ENV:local}
