@@ -35,14 +35,14 @@ public class CRUDService {
         todoRepository.save(todo);
     }
 
-    public void updateTodo(long todoId) throws Exception {
+    public void updateTodo(Long todoId) throws Exception {
         Todo todo = todoRepository.findById(todoId)
                 .orElseThrow(Exception::new);
 
         todo.toggleCompleted();
     }
 
-    public void deleteTodoById(long todoId){
+    public void deleteTodoById(Long todoId){
         todoRepository.deleteById(todoId);
     }
 }

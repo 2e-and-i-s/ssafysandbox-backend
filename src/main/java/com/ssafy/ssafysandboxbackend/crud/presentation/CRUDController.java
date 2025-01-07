@@ -28,7 +28,7 @@ public class CRUDController {
     }
 
     @PatchMapping("/{todoId}")
-    public ResponseEntity<?> updateTodo(@PathVariable long todoId){
+    public ResponseEntity<?> updateTodo(@PathVariable Long todoId){
         try {
             crudService.updateTodo(todoId);
         } catch (Exception e) {
@@ -38,7 +38,7 @@ public class CRUDController {
     }
 
     @DeleteMapping("/{todoId}")
-    public ResponseEntity<?> deleteTodo(@PathVariable long todoId){
+    public ResponseEntity<?> deleteTodo(@PathVariable Long todoId){
         crudService.deleteTodoById(todoId);
         return ResponseEntity.noContent().build();
     }
