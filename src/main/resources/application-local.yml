@@ -5,6 +5,7 @@ spring:
   config:
     import:
       - database.properties
+      - security.properties
 
   datasource:
     url: ${DB.URL}
