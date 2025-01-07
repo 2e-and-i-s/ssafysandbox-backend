@@ -1,0 +1,18 @@
+# database.properties.example
+# Local 개발 환경 설정 예시
+# 실제 사용 시 이 파일을 'database.properties'로 복사하여 사용
+
+# Database Connection
+DB.URL=jdbc:mysql://localhost:3306/sandbox?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+DB.USERNAME=your_username
+DB.PASSWORD=your_password
+DB.DRIVER=com.mysql.cj.jdbc.Driver
+
+# Hibernate Settings
+DB.DIALECT=org.hibernate.dialect.MySQLDialect
+DB.NAMING_STRATEGY=org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+# Note:
+# - URL의 sandbox를 사용할 데이터베이스 이름으로 변경
+# - USERNAME과 PASSWORD를 본인의 데이터베이스 계정 정보로 변경
+# - 타임존은 필요에 따라 변경 가능
