@@ -1,4 +1,9 @@
 package com.ssafy.ssafysandboxbackend.crud.repository;
 
-public interface TodoRepository{
+import com.ssafy.ssafysandboxbackend.crud.repository.domain.Todo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface TodoRepository extends JpaRepository<Todo, Long> {
 }
