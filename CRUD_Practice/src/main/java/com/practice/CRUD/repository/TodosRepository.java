@@ -1,5 +1,8 @@
 package com.practice.CRUD.repository;
 
-public class TodosRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.practice.CRUD.model.Todos;
+
+public interface TodosRepository extends JpaRepository<Todos, Integer> {
 
 }
